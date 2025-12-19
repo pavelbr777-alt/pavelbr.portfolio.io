@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо Браславського Павла</title>
+    <meta name="description" content="Особистий веб-сайт портфоліо Браславського Павла Віталійовича">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0057B7",
+                        secondary: "#FFD700",
+                        accent: "#FF6B6B",
+                        dark: "#1A1A2E",
+                        light: "#F8F9FA"
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .active-nav {
+            color: #FFD700;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="font-inter bg-light text-dark min-h-screen flex flex-col">
+    <!-- Header & Navigation -->
+    <header class="bg-primary text-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-user text-primary text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold">Браславський Павло</h1>
+                </div>
+                
+                <ul class="flex flex-wrap justify-center space-x-1 md:space-x-6">
+                    <li><a href="#home" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-300" onclick="showSection('home')">Головна</a></li>
+                    <li><a href="#about" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-300" onclick="showSection('about')">Про мене</a></li>
+                    <li><a href="#gallery" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-300" onclick="showSection('gallery')">Галерея</a></li>
+                    <li><a href="#hobbies" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-300" onclick="showSection('hobbies')">Хобі та досягнення</a></li>
+                    <li><a href="#survey" class="nav-link px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-300" onclick="showSection('survey')">Опитування</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Home Section -->
+        <section id="home" class="section active py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Вітаю на моєму сайті!</h2>
+                        <p class="text-xl mb-8 text-gray-700">Я - Браславський Павло Віталійович, студент та активний громадянин України. Цей сайт розповідає про моє життя, захоплення та плани на майбутнє.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#about" class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 shadow-lg" onclick="showSection('about')">Дізнатися більше</a>
+                            <a href="#survey" class="bg-secondary text-dark px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors duration-300 shadow-lg" onclick="showSection('survey')">Пройти опитування</a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="relative">
+                            <div class="w-64 h-64 md:w-80 md:h-80 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full overflow-hidden shadow-2xl">
+                                <img src="https://picsum.photos/400?random=1" alt="Фото Браславського Павла" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-accent text-white p-4 rounded-lg shadow-lg">
+                                <p class="font-bold">Патріот України</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section py-16 md:py-24 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Про мене</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <div class="bg-light p-8 rounded-xl shadow-lg mb-8">
+                            <h3 class="text-2xl font-bold mb-6 text-secondary flex items-center">
+                                <i class="fas fa-user-circle mr-3"></i> Особиста інформація
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-user text-primary mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Повне ім'я:</p>
+                                        <p class="text-lg">Браславський Павло Віталійович</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-birthday-cake text-primary mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Дата народження:</p>
+                                        <p class="text-lg">12 липня 2005 року</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Місце проживання:</p>
+                                        <p class="text-lg">Черкаська область, село Молодецьке</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-light p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-secondary flex items-center">
+                                <i class="fas fa-graduation-cap mr-3"></i> Освіта
+                            </h3>
+                            <p class="text-lg mb-4">Навчаюсь у вищому навчальному закладі, де отримую спеціальність, пов'язану з державною службою та безпекою.</p>
+                            <p class="text-lg">Планую присвятити себе служінню Україні у Державній службі з надзвичайних ситуацій.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-light p-8 rounded-xl shadow-lg h-full">
+                            <h3 class="text-2xl font-bold mb-6 text-secondary flex items-center">
+                                <i class="fas fa-bullseye mr-3"></i> Мої цілі
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                        <i class="fas fa-shield-alt text-primary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Служба в ДСНС</h4>
+                                        <p>Бажаю стати частиною Державної служби з надзвичайних ситуацій, щоб допомагати людям у складних ситуаціях та захищати рідну країну.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                        <i class="fas fa-heart text-accent text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Розвиток особистості</h4>
+                                        <p>Продовжувати розвиватися у спортивній та творчій діяльності, покращувати свої навички та досягати нових висот.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                        <i class="fas fa-users text-secondary text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Суспільна діяльність</h4>
+                                        <p>Брати активну участь у житті громади, допомагати оточуючим та бути прикладом для молодого покоління.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section py-16 md:py-24 bg-gradient-to-br from-secondary/10 to-accent/10 hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Моя галерея</h2>
+                <p class="text-xl text-center mb-12 max-w-3xl mx-auto">Тут ви можете побачити мої фотографії, рисунки та моменти з життя, які відображають мої інтереси та досягнення.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://picsum.photos/400/300?random=2" alt="Моє фото" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Особисте фото</h3>
+                            <p class="text-gray-600">Одне з моїх останніх фотографій</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://picsum.photos/400/300?random=3" alt="Мій рисунок" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Творчість</h3>
+                            <p class="text-gray-600">Один з моїх художніх творів</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://picsum.photos/400/300?random=4" alt="Спортивний момент" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Волейбол</h3>
+                            <p class="text-gray-600">Під час тренування з волейболу</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://picsum.photos/400/300?random=5" alt="Нагороди" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Мої нагороди</h3>
+                            <p class="text-gray-600">Частина моїх спортивних нагород</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://picsum.photos/400/300?random=6" alt="Змагання" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Військово-прикладні змагання</h3>
+                            <p class="text-gray-600">Участь у змаганнях за кубок Івана Богуна</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://picsum.photos/400/300?random=7" alt="Малювання" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Процес творчості</h3>
+                            <p class="text-gray-600">Під час створення нового рисунка</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-lg mb-6">Більше моїх робіт та фотографій ви можете побачити за посиланнями:</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://drive.google.com/file/d/16qZNZidApVe8MqqiPPTDgDJBshItDrbv/view?usp=drive_link" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 inline-flex items-center">
+                            <i class="fas fa-images mr-2"></i> Мої фото та рисунки
+                        </a>
+                        <a href="https://drive.google.com/file/d/1q4baL19DI3Qobt4PjZyZUAGbQUMn8v6Z/view?usp=drive_link" class="bg-secondary text-dark px-6 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors duration-300 inline-flex items-center">
+                            <i class="fas fa-trophy mr-2"></i> Нагороди за змагання
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies & Achievements Section -->
+        <section id="hobbies" class="section py-16 md:py-24 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Мої хобі та досягнення</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <div class="bg-light p-8 rounded-xl shadow-lg mb-8">
+                            <h3 class="text-2xl font-bold mb-6 text-secondary flex items-center">
+                                <i class="fas fa-volleyball-ball mr-3"></i> Волейбол
+                            </h3>
+                            <p class="text-lg mb-4">Волейбол - це моє головне спортивне захоплення. Займаюся ним вже кілька років і досяг значних успіхів:</p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-medal text-secondary mt-1 mr-3"></i>
+                                    <span>Неодноразово отримував призові місця разом з командою на регіональних змаганнях</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-users text-secondary mt-1 mr-3"></i>
+                                    <span>Розвиваю командний дух та лідерські якості через спорт</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-heartbeat text-secondary mt-1 mr-3"></i>
+                                    <span>Підтримую фізичну форму та здоров'я завдяки регулярним тренуванням</span>
+                                </li>
+                            </ul>
+                            <div class="bg-primary/10 p-4 rounded-lg">
+                                <p class="font-semibold">"Волейбол навчив мене працювати в команді, швидко приймати рішення та ніколи не здаватися"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-light p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-secondary flex items-center">
+                                <i class="fas fa-paint-brush mr-3"></i> Малювання
+                            </h3>
+                            <p class="text-lg mb-4">Малювання - це моє творче хобі, яке дозволяє виражати емоції та розвивати уяву:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-palette text-accent mt-1 mr-3"></i>
+                                    <span>Працюю з різними техніками та матеріалами</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-lightbulb text-accent mt-1 mr-3"></i>
+                                    <span>Створюю власні композиції та інтерпретації</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-eye text-accent mt-1 mr-3"></i>
+                                    <span>Розвиваю спостережливість та увагу до деталей</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-light p-8 rounded-xl shadow-lg h-full">
+                            <h3 class="text-2xl font-bold mb-6 text-secondary flex items-center">
+                                <i class="fas fa-trophy mr-3"></i> Досягнення
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="border-l-4 border-primary pl-4 py-2">
+                                    <h4 class="font-bold text-lg mb-1">Військово-прикладні змагання</h4>
+                                    <p class="text-gray-700">Активна участь у змаганнях з військово-прикладних видів спорту</p>
+                                </div>
+                                
+                                <div class="border-l-4 border-secondary pl-4 py-2">
+                                    <h4 class="font-bold text-lg mb-1">3 місце за розбиранням та збиранням автомата Калашникова</h4>
+                                    <p class="text-gray-700">На змаганні за кубок Івана Богуна показав відмінний результат у володінні зброєю</p>
+                                    <p class="text-sm text-gray-500 mt-1">Час: 25.4 секунди</p>
+                                </div>
+                                
+                                <div class="border-l-4 border-accent pl-4 py-2">
+                                    <h4 class="font-bold text-lg mb-1">Командні досягнення у волейболі</h4>
+                                    <p class="text-gray-700">Неодноразово приводив команду до призових місць на регіональних турнірах</p>
+                                </div>
+                                
+                                <div class="border-l-4 border-primary pl-4 py-2">
+                                    <h4 class="font-bold text-lg mb-1">Успіхи в навчанні</h4>
+                                    <p class="text-gray-700">Стабільні високі результати у навчанні, особливо у дисциплінах, пов'язаних з безпекою та державною службою</p>
+                                </div>
+                                
+                                <div class="bg-gradient-to-r from-primary/20 to-secondary/20 p-6 rounded-lg mt-8">
+                                    <h4 class="font-bold text-lg mb-2 text-primary">Моя філософія</h4>
+                                    <p class="italic">"Кожен день - це можливість стати кращим, сильнішим та кориснішим для оточуючих. Спорт, творчість та служіння суспільству - це шлях, який я обрав для себе"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Survey Section -->
+        <section id="survey" class="section py-16 md:py-24 bg-gradient-to-br from-primary/10 to-accent/10 hidden">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Опитування: Чому я вирішив працювати в ДСНС</h2>
+                <p class="text-xl text-center mb-12 max-w-3xl mx-auto">Будь ласка, заповніть цю форму опитування, щоб дізнатися вашу думку щодо мого вибору професії та мотивів служіння в Державній службі з надзвичайних ситуацій.</p>
+                
+                <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5 bg-primary text-white p-8 md:p-12">
+                            <h3 class="text-2xl font-bold mb-6">Чому ДСНС?</h3>
+                            <p class="mb-6">Моє рішення присвятити себе службі в ДСНС ґрунтується на кількох ключових факторах:</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>Бажання допомагати людям у складних ситуаціях</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>Патріотизм та прагнення захищати рідну країну</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>Інтерес до роботи в екстремальних умовах</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>Можливість постійного професійного розвитку</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="md:w-3/5 p-8 md:p-12">
+                            <form id="surveyForm" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-lg font-semibold mb-2">Ваше ім'я *</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                                </div>
+                                
+                                <div>
+                                    <label for="age" class="block text-lg font-semibold mb-2">Ваш вік *</label>
+                                    <select id="age" name="age" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                                        <option value="">Оберіть вікову категорію</option>
+                                        <option value="under18">До 18 років</option>
+                                        <option value="18-25">18-25 років</option>
+                                        <option value="26-35">26-35 років</option>
+                                        <option value="36-50">36-50 років</option>
+                                        <option value="over50">Понад 50 років</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-lg font-semibold mb-4">Наскільки ви підтримуєте мій вибір працювати в ДСНС? *</label>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center">
+                                            <input type="radio" id="support1" name="support" value="fully" required class="mr-3 h-5 w-5 text-primary">
+                                            <label for="support1" class="text-lg">Повністю підтримую, це благородна професія</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="radio" id="support2" name="support" value="partially" required class="mr-3 h-5 w-5 text-primary">
+                                            <label for="support2" class="text-lg">Частково підтримую, але є ризики</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="radio" id="support3" name="support" value="neutral" required class="mr-3 h-5 w-5 text-primary">
+                                            <label for="support3" class="text-lg">Нейтрально, кожен має право на свій вибір</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="radio" id="support4" name="support" value="not" required class="mr-3 h-5 w-5 text-primary">
+                                            <label for="support4" class="text-lg">Не підтримую, є кращі варіанти</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-lg font-semibold mb-4">Які якості, на вашу думку, найважливіші для працівника ДСНС? (оберіть до 3 варіантів)</label>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="quality1" name="qualities" value="courage" class="mr-3 h-5 w-5 text-primary">
+                                            <label for="quality1" class="text-lg">Мужність</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="quality2" name="qualities" value="responsibility" class="mr-3 h-5 w-5 text-primary">
+                                            <label for="quality2" class="text-lg">Відповідальність</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="quality3" name="qualities" value="physical" class="mr-3 h-5 w-5 text-primary">
+                                            <label for="quality3" class="text-lg">Фізична підготовка</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="quality4" name="qualities" value="stress" class="mr-3 h-5 w-5 text-primary">
+                                            <label for="quality4" class="text-lg">Стресостійкість</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="quality5" name="qualities" value="teamwork" class="mr-3 h-5 w-5 text-primary">
+                                            <label for="quality5" class="text-lg">Командність</label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input type="checkbox" id="quality6" name="qualities" value="knowledge" class="mr-3 h-5 w-5 text-primary">
+                                            <label for="quality6" class="text-lg">Професійні знання</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="motivation" class="block text-lg font-semibold mb-2">Як ви думаєте, що мотивує молодих людей обирати службу в ДСНС? *</label>
+                                    <textarea id="motivation" name="motivation" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"></textarea>
+                                </div>
+                                
+                                <div>
+                                    <label for="advice" class="block text-lg font-semibold mb-2">Ваші поради для мене як майбутнього працівника ДСНС</label>
+                                    <textarea id="advice" name="advice" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"></textarea>
+                                </div>
+                                
+                                <div class="pt-4">
+                                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary/90 transition-colors duration-300 shadow-lg">
+                                        Надіслати відповіді
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="surveyResult" class="max-w-4xl mx-auto mt-12 bg-white rounded-xl shadow-lg p-8 hidden">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-primary">Дякуємо за участь в опитуванні!</h3>
+                    <p class="text-lg text-center mb-6">Ваші відповіді були успішно збережені. Ось короткий звіт:</p>
+                    <div id="resultContent" class="space-y-4"></div>
+                    <div class="text-center mt-8">
+                        <button onclick="resetSurvey()" class="bg-secondary text-dark px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors duration-300">
+                            Заповнити ще раз
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-secondary">Контакти</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-primary"></i>
+                            <span>pavlo.braslavskyi@example.com</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-primary"></i>
+                            <span>+38 (XXX) XXX-XX-XX</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>Черкаська область, село Молодецьке</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-secondary">Швидкі посилання</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-secondary transition-colors duration-300" onclick="showSection('home')">Головна</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition-colors duration-300" onclick="showSection('about')">Про мене</a></li>
+                        <li><a href="#gallery" class="hover:text-secondary transition-colors duration-300" onclick="showSection('gallery')">Галерея</a></li>
+                        <li><a href="#hobbies" class="hover:text-secondary transition-colors duration-300" onclick="showSection('hobbies')">Хобі та досягнення</a></li>
+                        <li><a href="#survey" class="hover:text-secondary transition-colors duration-300" onclick="showSection('survey')">Опитування</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-secondary">Соціальні мережі</h3>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors duration-300">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors duration-300">
+                            <i class="fab fa-telegram text-white"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors duration-300">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Підпишіться на мої соціальні мережі, щоб дізнаватися про новини та досягнення!</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Браславський Павло Віталійович. Всі права захищені.</p>
+                <p class="text-gray-400 mt-2">Сайт створено з метою демонстрації навичок веб-розробки</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Define data at the beginning
+        const sections = [
+            { "id": "home", "name": "Головна" },
+            { "id": "about", "name": "Про мене" },
+            { "id": "gallery", "name": "Галерея" },
+            { "id": "hobbies", "name": "Хобі та досягнення" },
+            { "id": "survey", "name": "Опитування" }
+        ];
+
+        const surveyQuestions = {
+            "support": {
+                "fully": "Повністю підтримую, це благородна професія",
+                "partially": "Частково підтримую, але є ризики",
+                "neutral": "Нейтрально, кожен має право на свій вибір",
+                "not": "Не підтримую, є кращі варіанти"
+            },
+            "qualities": {
+                "courage": "Мужність",
+                "responsibility": "Відповідальність",
+                "physical": "Фізична підготовка",
+                "stress": "Стресостійкість",
+                "teamwork": "Командність",
+                "knowledge": "Професійні знання"
+            }
+        };
+
+        // Navigation functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Update active navigation link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active-nav');
+            });
+            
+            // Find and activate the clicked link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+            
+            // Scroll to top of section
+            if (sectionId !== 'home') {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Survey form handling
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                support: document.querySelector('input[name="support"]:checked').value,
+                qualities: Array.from(document.querySelectorAll('input[name="qualities"]:checked')).map(cb => cb.value),
+                motivation: document.getElementById('motivation').value,
+                advice: document.getElementById('advice').value
+            };
+            
+            // Validate qualities selection (max 3)
+            if (formData.qualities.length > 3) {
+                alert('Будь ласка, оберіть не більше 3 якостей');
+                return;
+            }
+            
+            // Display results
+            displaySurveyResults(formData);
+            
+            // Hide form and show results
+            document.getElementById('surveyForm').parentElement.parentElement.style.display = 'none';
+            document.getElementById('surveyResult').classList.remove('hidden');
+            
+            // Scroll to results
+            document.getElementById('surveyResult').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function displaySurveyResults(data) {
+            const resultContent = document.getElementById('resultContent');
+            let html = `
+                <div class="bg-light p-6 rounded-lg mb-6">
+                    <h4 class="font-bold text-xl mb-4 text-primary">Ваші відповіді:</h4>
+                    <div class="space-y-3">
+                        <p><strong>Ім'я:</strong> ${data.name}</p>
+                        <p><strong>Вікова категорія:</strong> ${document.getElementById('age').options[document.getElementById('age').selectedIndex].text}</p>
+                        <p><strong>Підтримка мого вибору:</strong> ${surveyQuestions.support[data.support]}</p>
+            `;
+            
+            if (data.qualities.length > 0) {
+                html += `<p><strong>Обрані якості:</strong> ${data.qualities.map(q => surveyQuestions.qualities[q]).join(', ')}</p>`;
+            }
+            
+            html += `
+                        <p><strong>Мотивація для служби в ДСНС:</strong> ${data.motivation}</p>
+            `;
+            
+            if (data.advice) {
+                html += `<p><strong>Ваші поради:</strong> ${data.advice}</p>`;
+            }
+            
+            html += `
+                    </div>
+                </div>
+                <div class="bg-primary/10 p-6 rounded-lg">
+                    <h4 class="font-bold text-xl mb-4 text-primary">Дякую за вашу думку!</h4>
+                    <p>Ваші відповіді допоможуть мені краще зрозуміти, як суспільство сприймає службу в ДСНС та які очікування мають люди від працівників цієї важливої професії.</p>
+                </div>
+            `;
+            
+            resultContent.innerHTML = html;
+        }
+
+        function resetSurvey() {
+            // Reset form
+            document.getElementById('surveyForm').reset();
+            
+            // Show form and hide results
+            document.getElementById('surveyForm').parentElement.parentElement.style.display = 'block';
+            document.getElementById('surveyResult').classList.add('hidden');
+            
+            // Scroll to form
+            document.getElementById('survey').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set home as active
+            document.querySelector('.nav-link[href="#home"]').classList.add('active-nav');
+            
+            // Add smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        showSection(targetId);
+                    }
+                });
+            });
+            
+            // Initialize form validation
+            const checkboxes = document.querySelectorAll('input[name="qualities"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const checkedCount = document.querySelectorAll('input[name="qualities"]:checked').length;
+                    if (checkedCount > 3) {
+                        this.checked = false;
+                        alert('Можна вибрати не більше 3 якостей');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
